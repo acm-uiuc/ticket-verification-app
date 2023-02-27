@@ -12,12 +12,16 @@ class ApiService {
     );
   }
 
-  Future<Either<Failure, Unit>> postQrScanResult() async {
+  Future<Either<Failure, Unit>> postQrScanResult({required String qrCodeContent}) async {
     try {
-      final response = await _dio.post('', data: {});
+      final response = await _dio.post('', data: {
+        'code': qrCodeContent,
+      });
+
       if (response.statusCode != 200) {
         return left(Failure(message: 'Posting result failed: ${response.statusMessage}'));
       }
+
       return right(unit);
     } catch (e) {
       return left(Failure(message: 'Exception caught: $e'));
