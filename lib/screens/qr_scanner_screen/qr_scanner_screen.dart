@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:idk/services/api_service.dart';
-import 'package:idk/services/provider.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:ticket_verification_app/services/api_service.dart';
+import 'package:ticket_verification_app/services/provider.dart';
 
 class QrScannerScreen extends ConsumerStatefulWidget {
   const QrScannerScreen({super.key});

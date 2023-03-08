@@ -1,6 +1,6 @@
 {
-    "name": "idk",
-    "short_name": "idk",
+    "name": "ticket_verification_app",
+    "short_name": "ticket_verification_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

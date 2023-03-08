@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:idk/screens/qr_scanner_screen/qr_scanner_screen.dart';
+import 'package:ticket_verification_app/screens/qr_scanner_screen/qr_scanner_screen.dart';
 
 void main() {
   runApp(const MyApp());

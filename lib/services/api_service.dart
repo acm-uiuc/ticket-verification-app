@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:idk/models/failure.dart';
-import 'package:idk/models/response_data.dart';
+import 'package:ticket_verification_app/models/failure.dart';
+import 'package:ticket_verification_app/models/response_data.dart';
 
 class ApiService {
   static const String _baseUrl = '';

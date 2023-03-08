@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.idk">
+    package="com.example.ticket_verification_app">
    <application
-        android:label="idk"
+        android:label="ticket_verification_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

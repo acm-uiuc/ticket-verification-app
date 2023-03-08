@@ -1,4 +1,4 @@
-# idk
+# ticket_verification_app
 
 A new Flutter project.
 
