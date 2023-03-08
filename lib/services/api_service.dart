@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:idk/models/failure.dart';
+import 'package:idk/models/response_data.dart';
 
 class ApiService {
   static const String _baseUrl = '';
@@ -12,17 +13,16 @@ class ApiService {
     );
   }
 
-  Future<Either<Failure, Unit>> postQrScanResult({required String qrCodeContent}) async {
+  Future<Either<Failure, ResponseData>> getQrScanResult({required String qrCodeContent}) async {
     try {
-      final response = await _dio.post('', data: {
+      final response = await _dio.get('', queryParameters: {
         'code': qrCodeContent,
       });
 
       if (response.statusCode != 200) {
         return left(Failure(message: 'Posting result failed: ${response.statusMessage}'));
       }
-
-      return right(unit);
+      return right(ResponseData.fromJson(response.data as Map<String, dynamic>));
     } catch (e) {
       return left(Failure(message: 'Exception caught: $e'));
     }

@@ -65,7 +65,7 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
         );
         return;
       }
-      final apiResult = await ref.read<ApiService>(apiServiceProvider).postQrScanResult(qrCodeContent: result!.code!);
+      final apiResult = await ref.read<ApiService>(apiServiceProvider).getQrScanResult(qrCodeContent: result!.code!);
       apiResult.fold(
         (failure) => showDialog(
           context: context,
@@ -83,11 +83,12 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
             ],
           ),
         ),
-        (_) => showDialog(
+        (responseData) => showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
             title: const Text('Success'),
-            content: const Text('The qr code was posted successfully'),
+            content: Text(
+                'User Name: ${responseData.name}\nACM member: ${responseData.memberStatus ? 'Yes' : 'No'}\n Event Name: ${responseData.eventName}'),
             actions: [
               TextButton(
                 onPressed: () {
