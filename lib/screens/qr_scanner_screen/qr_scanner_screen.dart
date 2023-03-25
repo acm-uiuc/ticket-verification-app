@@ -66,7 +66,7 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
                 builder: (ctx) => AlertDialog(
                   title: const Text('Success'),
                   content: Text(
-                      'User Name: ${responseData.name}\nACM member: ${responseData.memberStatus ? 'Yes' : 'No'}\n Event Name: ${responseData.eventName}'),
+                      'User NetID: ${responseData.ticketholderNetId}\n Event ID: ${responseData.eventId}\nUsed: ${responseData.used}'),
                   actions: [
                     TextButton(
                       onPressed: () {
