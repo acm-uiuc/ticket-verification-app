@@ -5,14 +5,14 @@ part 'response_data.g.dart';
 
 @freezed
 class ResponseData with _$ResponseData {
-  factory ResponseData(
-      {required String ticket_id,
-      required String ticketholder_netid,
-      required String payment_method,
-      required String event_id,
-      required bool used,
-      required int purchase_time}) = _ResponseData;
+  factory ResponseData({
+    @JsonKey(name: "ticket_id") required String ticketId,
+    @JsonKey(name: "ticketholder_netid") required String ticketholderNetId,
+    @JsonKey(name: "payment_method") required String paymentMethod,
+    @JsonKey(name: "event_id") required String eventId,
+    required bool used,
+    @JsonKey(name: "purchase_time") required int purchaseTime,
+  }) = _ResponseData;
 
-  factory ResponseData.fromJson(Map<String, dynamic> json) =>
-      _$ResponseDataFromJson(json);
+  factory ResponseData.fromJson(Map<String, dynamic> json) => _$ResponseDataFromJson(json);
 }

@@ -20,12 +20,17 @@ ResponseData _$ResponseDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResponseData {
-  String get ticket_id => throw _privateConstructorUsedError;
-  String get ticketholder_netid => throw _privateConstructorUsedError;
-  String get payment_method => throw _privateConstructorUsedError;
-  String get event_id => throw _privateConstructorUsedError;
+  @JsonKey(name: "ticket_id")
+  String get ticketId => throw _privateConstructorUsedError;
+  @JsonKey(name: "ticketholder_netid")
+  String get ticketholderNetId => throw _privateConstructorUsedError;
+  @JsonKey(name: "payment_method")
+  String get paymentMethod => throw _privateConstructorUsedError;
+  @JsonKey(name: "event_id")
+  String get eventId => throw _privateConstructorUsedError;
   bool get used => throw _privateConstructorUsedError;
-  int get purchase_time => throw _privateConstructorUsedError;
+  @JsonKey(name: "purchase_time")
+  int get purchaseTime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,12 +45,12 @@ abstract class $ResponseDataCopyWith<$Res> {
       _$ResponseDataCopyWithImpl<$Res, ResponseData>;
   @useResult
   $Res call(
-      {String ticket_id,
-      String ticketholder_netid,
-      String payment_method,
-      String event_id,
+      {@JsonKey(name: "ticket_id") String ticketId,
+      @JsonKey(name: "ticketholder_netid") String ticketholderNetId,
+      @JsonKey(name: "payment_method") String paymentMethod,
+      @JsonKey(name: "event_id") String eventId,
       bool used,
-      int purchase_time});
+      @JsonKey(name: "purchase_time") int purchaseTime});
 }
 
 /// @nodoc
@@ -61,37 +66,37 @@ class _$ResponseDataCopyWithImpl<$Res, $Val extends ResponseData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ticket_id = null,
-    Object? ticketholder_netid = null,
-    Object? payment_method = null,
-    Object? event_id = null,
+    Object? ticketId = null,
+    Object? ticketholderNetId = null,
+    Object? paymentMethod = null,
+    Object? eventId = null,
     Object? used = null,
-    Object? purchase_time = null,
+    Object? purchaseTime = null,
   }) {
     return _then(_value.copyWith(
-      ticket_id: null == ticket_id
-          ? _value.ticket_id
-          : ticket_id // ignore: cast_nullable_to_non_nullable
+      ticketId: null == ticketId
+          ? _value.ticketId
+          : ticketId // ignore: cast_nullable_to_non_nullable
               as String,
-      ticketholder_netid: null == ticketholder_netid
-          ? _value.ticketholder_netid
-          : ticketholder_netid // ignore: cast_nullable_to_non_nullable
+      ticketholderNetId: null == ticketholderNetId
+          ? _value.ticketholderNetId
+          : ticketholderNetId // ignore: cast_nullable_to_non_nullable
               as String,
-      payment_method: null == payment_method
-          ? _value.payment_method
-          : payment_method // ignore: cast_nullable_to_non_nullable
+      paymentMethod: null == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
               as String,
-      event_id: null == event_id
-          ? _value.event_id
-          : event_id // ignore: cast_nullable_to_non_nullable
+      eventId: null == eventId
+          ? _value.eventId
+          : eventId // ignore: cast_nullable_to_non_nullable
               as String,
       used: null == used
           ? _value.used
           : used // ignore: cast_nullable_to_non_nullable
               as bool,
-      purchase_time: null == purchase_time
-          ? _value.purchase_time
-          : purchase_time // ignore: cast_nullable_to_non_nullable
+      purchaseTime: null == purchaseTime
+          ? _value.purchaseTime
+          : purchaseTime // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -106,12 +111,12 @@ abstract class _$$_ResponseDataCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String ticket_id,
-      String ticketholder_netid,
-      String payment_method,
-      String event_id,
+      {@JsonKey(name: "ticket_id") String ticketId,
+      @JsonKey(name: "ticketholder_netid") String ticketholderNetId,
+      @JsonKey(name: "payment_method") String paymentMethod,
+      @JsonKey(name: "event_id") String eventId,
       bool used,
-      int purchase_time});
+      @JsonKey(name: "purchase_time") int purchaseTime});
 }
 
 /// @nodoc
@@ -125,37 +130,37 @@ class __$$_ResponseDataCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ticket_id = null,
-    Object? ticketholder_netid = null,
-    Object? payment_method = null,
-    Object? event_id = null,
+    Object? ticketId = null,
+    Object? ticketholderNetId = null,
+    Object? paymentMethod = null,
+    Object? eventId = null,
     Object? used = null,
-    Object? purchase_time = null,
+    Object? purchaseTime = null,
   }) {
     return _then(_$_ResponseData(
-      ticket_id: null == ticket_id
-          ? _value.ticket_id
-          : ticket_id // ignore: cast_nullable_to_non_nullable
+      ticketId: null == ticketId
+          ? _value.ticketId
+          : ticketId // ignore: cast_nullable_to_non_nullable
               as String,
-      ticketholder_netid: null == ticketholder_netid
-          ? _value.ticketholder_netid
-          : ticketholder_netid // ignore: cast_nullable_to_non_nullable
+      ticketholderNetId: null == ticketholderNetId
+          ? _value.ticketholderNetId
+          : ticketholderNetId // ignore: cast_nullable_to_non_nullable
               as String,
-      payment_method: null == payment_method
-          ? _value.payment_method
-          : payment_method // ignore: cast_nullable_to_non_nullable
+      paymentMethod: null == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
               as String,
-      event_id: null == event_id
-          ? _value.event_id
-          : event_id // ignore: cast_nullable_to_non_nullable
+      eventId: null == eventId
+          ? _value.eventId
+          : eventId // ignore: cast_nullable_to_non_nullable
               as String,
       used: null == used
           ? _value.used
           : used // ignore: cast_nullable_to_non_nullable
               as bool,
-      purchase_time: null == purchase_time
-          ? _value.purchase_time
-          : purchase_time // ignore: cast_nullable_to_non_nullable
+      purchaseTime: null == purchaseTime
+          ? _value.purchaseTime
+          : purchaseTime // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -165,32 +170,37 @@ class __$$_ResponseDataCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResponseData implements _ResponseData {
   _$_ResponseData(
-      {required this.ticket_id,
-      required this.ticketholder_netid,
-      required this.payment_method,
-      required this.event_id,
+      {@JsonKey(name: "ticket_id") required this.ticketId,
+      @JsonKey(name: "ticketholder_netid") required this.ticketholderNetId,
+      @JsonKey(name: "payment_method") required this.paymentMethod,
+      @JsonKey(name: "event_id") required this.eventId,
       required this.used,
-      required this.purchase_time});
+      @JsonKey(name: "purchase_time") required this.purchaseTime});
 
   factory _$_ResponseData.fromJson(Map<String, dynamic> json) =>
       _$$_ResponseDataFromJson(json);
 
   @override
-  final String ticket_id;
+  @JsonKey(name: "ticket_id")
+  final String ticketId;
   @override
-  final String ticketholder_netid;
+  @JsonKey(name: "ticketholder_netid")
+  final String ticketholderNetId;
   @override
-  final String payment_method;
+  @JsonKey(name: "payment_method")
+  final String paymentMethod;
   @override
-  final String event_id;
+  @JsonKey(name: "event_id")
+  final String eventId;
   @override
   final bool used;
   @override
-  final int purchase_time;
+  @JsonKey(name: "purchase_time")
+  final int purchaseTime;
 
   @override
   String toString() {
-    return 'ResponseData(ticket_id: $ticket_id, ticketholder_netid: $ticketholder_netid, payment_method: $payment_method, event_id: $event_id, used: $used, purchase_time: $purchase_time)';
+    return 'ResponseData(ticketId: $ticketId, ticketholderNetId: $ticketholderNetId, paymentMethod: $paymentMethod, eventId: $eventId, used: $used, purchaseTime: $purchaseTime)';
   }
 
   @override
@@ -198,23 +208,22 @@ class _$_ResponseData implements _ResponseData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResponseData &&
-            (identical(other.ticket_id, ticket_id) ||
-                other.ticket_id == ticket_id) &&
-            (identical(other.ticketholder_netid, ticketholder_netid) ||
-                other.ticketholder_netid == ticketholder_netid) &&
-            (identical(other.payment_method, payment_method) ||
-                other.payment_method == payment_method) &&
-            (identical(other.event_id, event_id) ||
-                other.event_id == event_id) &&
+            (identical(other.ticketId, ticketId) ||
+                other.ticketId == ticketId) &&
+            (identical(other.ticketholderNetId, ticketholderNetId) ||
+                other.ticketholderNetId == ticketholderNetId) &&
+            (identical(other.paymentMethod, paymentMethod) ||
+                other.paymentMethod == paymentMethod) &&
+            (identical(other.eventId, eventId) || other.eventId == eventId) &&
             (identical(other.used, used) || other.used == used) &&
-            (identical(other.purchase_time, purchase_time) ||
-                other.purchase_time == purchase_time));
+            (identical(other.purchaseTime, purchaseTime) ||
+                other.purchaseTime == purchaseTime));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, ticket_id, ticketholder_netid,
-      payment_method, event_id, used, purchase_time);
+  int get hashCode => Object.hash(runtimeType, ticketId, ticketholderNetId,
+      paymentMethod, eventId, used, purchaseTime);
 
   @JsonKey(ignore: true)
   @override
@@ -232,28 +241,38 @@ class _$_ResponseData implements _ResponseData {
 
 abstract class _ResponseData implements ResponseData {
   factory _ResponseData(
-      {required final String ticket_id,
-      required final String ticketholder_netid,
-      required final String payment_method,
-      required final String event_id,
+      {@JsonKey(name: "ticket_id")
+          required final String ticketId,
+      @JsonKey(name: "ticketholder_netid")
+          required final String ticketholderNetId,
+      @JsonKey(name: "payment_method")
+          required final String paymentMethod,
+      @JsonKey(name: "event_id")
+          required final String eventId,
       required final bool used,
-      required final int purchase_time}) = _$_ResponseData;
+      @JsonKey(name: "purchase_time")
+          required final int purchaseTime}) = _$_ResponseData;
 
   factory _ResponseData.fromJson(Map<String, dynamic> json) =
       _$_ResponseData.fromJson;
 
   @override
-  String get ticket_id;
+  @JsonKey(name: "ticket_id")
+  String get ticketId;
   @override
-  String get ticketholder_netid;
+  @JsonKey(name: "ticketholder_netid")
+  String get ticketholderNetId;
   @override
-  String get payment_method;
+  @JsonKey(name: "payment_method")
+  String get paymentMethod;
   @override
-  String get event_id;
+  @JsonKey(name: "event_id")
+  String get eventId;
   @override
   bool get used;
   @override
-  int get purchase_time;
+  @JsonKey(name: "purchase_time")
+  int get purchaseTime;
   @override
   @JsonKey(ignore: true)
   _$$_ResponseDataCopyWith<_$_ResponseData> get copyWith =>
