@@ -65,13 +65,16 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
         );
         return;
       }
-      final apiResult = await ref.read<ApiService>(apiServiceProvider).getQrScanResult(qrCodeContent: result!.code!);
+      final apiResult = await ref
+          .read<ApiService>(apiServiceProvider)
+          .getQrScanResult(qrCodeContent: result!.code!);
       apiResult.fold(
         (failure) => showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
             title: const Text('Failure'),
-            content: Text('The api call failed with message: ${failure.message}'),
+            content:
+                Text('The api call failed with message: ${failure.message}'),
             actions: [
               TextButton(
                 onPressed: () {
@@ -88,7 +91,7 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
           builder: (ctx) => AlertDialog(
             title: const Text('Success'),
             content: Text(
-                'User Name: ${responseData.name}\nACM member: ${responseData.memberStatus ? 'Yes' : 'No'}\n Event Name: ${responseData.eventName}'),
+                'NetID: ${responseData.ticketholder_netid}\n Event Name: ${responseData.event_id}\n Ticket Used: ${responseData.used ? "Yes" : "No"}'),
             actions: [
               TextButton(
                 onPressed: () {

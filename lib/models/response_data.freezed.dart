@@ -20,9 +20,12 @@ ResponseData _$ResponseDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResponseData {
-  String get name => throw _privateConstructorUsedError;
-  bool get memberStatus => throw _privateConstructorUsedError;
-  String get eventName => throw _privateConstructorUsedError;
+  String get ticket_id => throw _privateConstructorUsedError;
+  String get ticketholder_netid => throw _privateConstructorUsedError;
+  String get payment_method => throw _privateConstructorUsedError;
+  String get event_id => throw _privateConstructorUsedError;
+  bool get used => throw _privateConstructorUsedError;
+  int get purchase_time => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +39,13 @@ abstract class $ResponseDataCopyWith<$Res> {
           ResponseData value, $Res Function(ResponseData) then) =
       _$ResponseDataCopyWithImpl<$Res, ResponseData>;
   @useResult
-  $Res call({String name, bool memberStatus, String eventName});
+  $Res call(
+      {String ticket_id,
+      String ticketholder_netid,
+      String payment_method,
+      String event_id,
+      bool used,
+      int purchase_time});
 }
 
 /// @nodoc
@@ -52,23 +61,38 @@ class _$ResponseDataCopyWithImpl<$Res, $Val extends ResponseData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? memberStatus = null,
-    Object? eventName = null,
+    Object? ticket_id = null,
+    Object? ticketholder_netid = null,
+    Object? payment_method = null,
+    Object? event_id = null,
+    Object? used = null,
+    Object? purchase_time = null,
   }) {
     return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      ticket_id: null == ticket_id
+          ? _value.ticket_id
+          : ticket_id // ignore: cast_nullable_to_non_nullable
               as String,
-      memberStatus: null == memberStatus
-          ? _value.memberStatus
-          : memberStatus // ignore: cast_nullable_to_non_nullable
+      ticketholder_netid: null == ticketholder_netid
+          ? _value.ticketholder_netid
+          : ticketholder_netid // ignore: cast_nullable_to_non_nullable
+              as String,
+      payment_method: null == payment_method
+          ? _value.payment_method
+          : payment_method // ignore: cast_nullable_to_non_nullable
+              as String,
+      event_id: null == event_id
+          ? _value.event_id
+          : event_id // ignore: cast_nullable_to_non_nullable
+              as String,
+      used: null == used
+          ? _value.used
+          : used // ignore: cast_nullable_to_non_nullable
               as bool,
-      eventName: null == eventName
-          ? _value.eventName
-          : eventName // ignore: cast_nullable_to_non_nullable
-              as String,
+      purchase_time: null == purchase_time
+          ? _value.purchase_time
+          : purchase_time // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -81,7 +105,13 @@ abstract class _$$_ResponseDataCopyWith<$Res>
       __$$_ResponseDataCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, bool memberStatus, String eventName});
+  $Res call(
+      {String ticket_id,
+      String ticketholder_netid,
+      String payment_method,
+      String event_id,
+      bool used,
+      int purchase_time});
 }
 
 /// @nodoc
@@ -95,23 +125,38 @@ class __$$_ResponseDataCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
-    Object? memberStatus = null,
-    Object? eventName = null,
+    Object? ticket_id = null,
+    Object? ticketholder_netid = null,
+    Object? payment_method = null,
+    Object? event_id = null,
+    Object? used = null,
+    Object? purchase_time = null,
   }) {
     return _then(_$_ResponseData(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      ticket_id: null == ticket_id
+          ? _value.ticket_id
+          : ticket_id // ignore: cast_nullable_to_non_nullable
               as String,
-      memberStatus: null == memberStatus
-          ? _value.memberStatus
-          : memberStatus // ignore: cast_nullable_to_non_nullable
+      ticketholder_netid: null == ticketholder_netid
+          ? _value.ticketholder_netid
+          : ticketholder_netid // ignore: cast_nullable_to_non_nullable
+              as String,
+      payment_method: null == payment_method
+          ? _value.payment_method
+          : payment_method // ignore: cast_nullable_to_non_nullable
+              as String,
+      event_id: null == event_id
+          ? _value.event_id
+          : event_id // ignore: cast_nullable_to_non_nullable
+              as String,
+      used: null == used
+          ? _value.used
+          : used // ignore: cast_nullable_to_non_nullable
               as bool,
-      eventName: null == eventName
-          ? _value.eventName
-          : eventName // ignore: cast_nullable_to_non_nullable
-              as String,
+      purchase_time: null == purchase_time
+          ? _value.purchase_time
+          : purchase_time // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -120,23 +165,32 @@ class __$$_ResponseDataCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResponseData implements _ResponseData {
   _$_ResponseData(
-      {required this.name,
-      required this.memberStatus,
-      required this.eventName});
+      {required this.ticket_id,
+      required this.ticketholder_netid,
+      required this.payment_method,
+      required this.event_id,
+      required this.used,
+      required this.purchase_time});
 
   factory _$_ResponseData.fromJson(Map<String, dynamic> json) =>
       _$$_ResponseDataFromJson(json);
 
   @override
-  final String name;
+  final String ticket_id;
   @override
-  final bool memberStatus;
+  final String ticketholder_netid;
   @override
-  final String eventName;
+  final String payment_method;
+  @override
+  final String event_id;
+  @override
+  final bool used;
+  @override
+  final int purchase_time;
 
   @override
   String toString() {
-    return 'ResponseData(name: $name, memberStatus: $memberStatus, eventName: $eventName)';
+    return 'ResponseData(ticket_id: $ticket_id, ticketholder_netid: $ticketholder_netid, payment_method: $payment_method, event_id: $event_id, used: $used, purchase_time: $purchase_time)';
   }
 
   @override
@@ -144,16 +198,23 @@ class _$_ResponseData implements _ResponseData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResponseData &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.memberStatus, memberStatus) ||
-                other.memberStatus == memberStatus) &&
-            (identical(other.eventName, eventName) ||
-                other.eventName == eventName));
+            (identical(other.ticket_id, ticket_id) ||
+                other.ticket_id == ticket_id) &&
+            (identical(other.ticketholder_netid, ticketholder_netid) ||
+                other.ticketholder_netid == ticketholder_netid) &&
+            (identical(other.payment_method, payment_method) ||
+                other.payment_method == payment_method) &&
+            (identical(other.event_id, event_id) ||
+                other.event_id == event_id) &&
+            (identical(other.used, used) || other.used == used) &&
+            (identical(other.purchase_time, purchase_time) ||
+                other.purchase_time == purchase_time));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, memberStatus, eventName);
+  int get hashCode => Object.hash(runtimeType, ticket_id, ticketholder_netid,
+      payment_method, event_id, used, purchase_time);
 
   @JsonKey(ignore: true)
   @override
@@ -171,19 +232,28 @@ class _$_ResponseData implements _ResponseData {
 
 abstract class _ResponseData implements ResponseData {
   factory _ResponseData(
-      {required final String name,
-      required final bool memberStatus,
-      required final String eventName}) = _$_ResponseData;
+      {required final String ticket_id,
+      required final String ticketholder_netid,
+      required final String payment_method,
+      required final String event_id,
+      required final bool used,
+      required final int purchase_time}) = _$_ResponseData;
 
   factory _ResponseData.fromJson(Map<String, dynamic> json) =
       _$_ResponseData.fromJson;
 
   @override
-  String get name;
+  String get ticket_id;
   @override
-  bool get memberStatus;
+  String get ticketholder_netid;
   @override
-  String get eventName;
+  String get payment_method;
+  @override
+  String get event_id;
+  @override
+  bool get used;
+  @override
+  int get purchase_time;
   @override
   @JsonKey(ignore: true)
   _$$_ResponseDataCopyWith<_$_ResponseData> get copyWith =>
