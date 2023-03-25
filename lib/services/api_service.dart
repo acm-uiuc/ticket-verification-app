@@ -24,6 +24,7 @@ class ApiService {
       }
       return right(ResponseData.fromJson(response.data as Map<String, dynamic>));
     } catch (e) {
+      // rethrow;
       return left(Failure(message: 'Exception caught: $e'));
     }
   }
