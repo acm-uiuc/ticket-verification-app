@@ -4,7 +4,7 @@ import 'package:ticket_verification_app/models/failure.dart';
 import 'package:ticket_verification_app/models/response_data.dart';
 
 class ApiService {
-  static const String _baseUrl = 'https://n6pzrhqr3je5ubaure5yarfuli0jsnpr.lambda-url.us-east-1.on.aws/';
+  static const String _baseUrl = 'https://ticketing.acm.illinois.edu/api/v1/checkIn';
   late final Dio _dio;
 
   ApiService() {
@@ -15,7 +15,7 @@ class ApiService {
 
   Future<Either<Failure, ResponseData>> getQrScanResult({required String qrCodeContent}) async {
     try {
-      final response = await _dio.get('', queryParameters: {
+      final response = await _dio.post('', queryParameters: {
         'code': qrCodeContent,
       });
 
