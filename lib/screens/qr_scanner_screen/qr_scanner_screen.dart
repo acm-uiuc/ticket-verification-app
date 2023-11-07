@@ -64,7 +64,8 @@ class _QrScannerScreenState extends ConsumerState<QrScannerScreen> {
               (responseData) => showDialog(
                 context: context,
                 builder: (ctx) => AlertDialog(
-                  title: const Text('Success'),
+                  backgroundColor: responseData.used ? Colors.redAccent : Colors.white,
+                  title: responseData.used ? const Text("DO NOT HONOR") : const Text('Success'),
                   content: Text(
                       'User NetID: ${responseData.ticketholderNetId}\n Event ID: ${responseData.eventId}\nUsed: ${responseData.used}'),
                   actions: [
