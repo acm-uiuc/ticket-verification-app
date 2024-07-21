@@ -4,7 +4,7 @@ import 'package:ticket_verification_app/models/failure.dart';
 import 'package:ticket_verification_app/models/response_data.dart';
 
 class ApiService {
-  static const String _baseUrl = 'https://ticketing.acm.illinois.edu/api/v1/checkIn';
+  static const String _baseUrl = 'https://ticketing.aws.acmuiuc.org/api/v1/checkIn';
   late final Dio _dio;
 
   ApiService() {
